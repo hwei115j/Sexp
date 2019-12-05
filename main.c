@@ -115,10 +115,12 @@ static void node(int space, int flag)
 int main() 
 {
     int tok = gettoken();
-    printf("(");
 
     while(tok != Rparen) {
+        printf("(");
         node(0, 0);
         printf("\n");
+        tok = gettoken();
+
     }
 }
